@@ -124,6 +124,9 @@ function App() {
   }
   return (
     <div className = 'main'>
+    <script type="text/javascript">
+      document.querySelector('form').reset()
+    </script>
     <div className = 'interface'>
       <input className = 'inputT' placeholder='Task title' onChange = {(event) => setTitle(event.target.value)}></input>
       <input className = 'inputT' placeholder='Task description' onChange = {(event) => setText(event.target.value)}></input>

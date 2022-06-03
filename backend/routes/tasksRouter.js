@@ -37,14 +37,15 @@ router.route('/')
         title, text, createdByUser_id, responsibleUser_id, status_id: 2,
       });
 
-      await fetch('https://hooks.slack.com/services/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', { /* BP test */
-      // await fetch('https://hooks.slack.com/services/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', {
+      // await fetch('https://hooks.slack.com/services/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', { /* BP test */
+      await fetch('https://hooks.slack.com/services/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', {
         method: 'post',
         headers: {
           'Content-Type': 'Content-type: application/json',
         },
         body: '{"text":"Hi Leopards! New Task Created http://localhost:3000/"}',
       });
+      return res.sendStatus(200);
     } catch (err) {
       console.log('ERROR--->', err);
       return res.sendStatus(500);
